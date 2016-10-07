@@ -22,6 +22,7 @@
             android:name=".MainActivity"
             android:label="MainActivity" >
         </activity>
+        <activity android:name=".MainScreen"/>
     </application>
 
 </manifest>
