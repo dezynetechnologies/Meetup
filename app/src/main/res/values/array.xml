@@ -6,7 +6,24 @@
     <array name="card_picture_2">
         <item>@drawable/dance</item>
     </array>
+    <array name="card_picture_3">
+        <item>@drawable/art</item>
+    </array>
+    <array name="card_picture_4">
+        <item>@drawable/cartoon</item>
+    </array>
+    <array name="card_picture_explore">
+        <item>@drawable/outdoor</item>
+        <item>@drawable/outdoor1</item>
+        <item>@drawable/outdoor2</item>
+        <item>@drawable/outdoor3</item>
+    </array>
 
-
+    <array name="card_picture_explore_1">
+        <item>@drawable/outdoor2</item>
+        <item>@drawable/outdoor3</item>
+        <item>@drawable/outdoor</item>
+        <item>@drawable/outdoor1</item>
+    </array>
 
 </resources>
