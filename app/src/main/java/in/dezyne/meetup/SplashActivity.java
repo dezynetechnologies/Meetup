@@ -22,6 +22,12 @@ public class SplashActivity extends Activity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_activity);
 
+        Intent intent = getIntent();
+        String action = intent.getAction();
+        Uri data = intent.getData();
+
+
+
         login= (TextView)findViewById(R.id.login);
         mVV = (VideoView)findViewById(R.id.videoView);
         String videopath = "android.resource://"+getPackageName()+ "/"+ R.raw.movie;
