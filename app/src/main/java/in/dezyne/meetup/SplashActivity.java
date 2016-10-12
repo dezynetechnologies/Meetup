@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -22,9 +23,7 @@ public class SplashActivity extends Activity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_activity);
 
-        Intent intent = getIntent();
-        String action = intent.getAction();
-        Uri data = intent.getData();
+
 
 
 

@@ -23,16 +23,32 @@
                     android:pathPrefix="/meetup" />
                 <!-- note that the leading "/" is required for pathPrefix-->
                 <!-- Accepts URIs that begin with "example://gizmos” -->
-                <data android:scheme="example"
-                    android:host="gizmos" />
+
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".MainActivity"
-            android:label="MainActivity" >
+            android:name=".MainActivity">
+
         </activity>
-        <activity android:name=".MainScreen"/>
+        <activity android:name=".MainScreen">
+            </activity>
+        <activity android:name=".FabOnClickActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+        <activity android:name=".Profile_Activity"
+            android:theme = "@style/NoActionBar">
+        </activity>
     </application>
 
 </manifest>

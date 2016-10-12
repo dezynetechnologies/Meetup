@@ -1,25 +1,47 @@
 package in.dezyne.meetup;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 public class MainScreen extends AppCompatActivity {
 
+    private FloatingActionButton fab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_screen);
+
+        fab = (FloatingActionButton)findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainScreen.this,FabOnClickActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+
 
         LinearLayoutManager linearLayoutManager
                 = new LinearLayoutManager(MainScreen.this, LinearLayoutManager.HORIZONTAL, false);
@@ -61,7 +83,13 @@ public class MainScreen extends AppCompatActivity {
         recyclerView5.setHasFixedSize(true);
         recyclerView5.setLayoutManager(linearLayoutManager5);
 
-
+        LinearLayoutManager linearLayoutManager6
+                = new LinearLayoutManager(MainScreen.this, LinearLayoutManager.VERTICAL, false);
+        RecyclerView recyclerView6 = (RecyclerView)findViewById(R.id.recyclerView6);
+        ContentAdapter6 adapter6 = new ContentAdapter6(recyclerView6.getContext());
+        recyclerView6.setAdapter(adapter6);
+        recyclerView6.setHasFixedSize(true);
+        recyclerView6.setLayoutManager(linearLayoutManager6);
 
     }
 
@@ -272,8 +300,87 @@ public class MainScreen extends AppCompatActivity {
         }
     }
 
+    public class ViewHolder6 extends RecyclerView.ViewHolder
+    {
+
+        ImageView picture;
+
+        public ViewHolder6(LayoutInflater inflater, ViewGroup parent) {
+            super(inflater.inflate(R.layout.card_layout_explore, parent, false));
+            picture =(ImageView)itemView.findViewById(R.id.image_explore);
+        }
+    }
+
+    public class ContentAdapter6 extends RecyclerView.Adapter<ViewHolder6>
+    {
+        private static final int LENGTH = 5;
+        private final Drawable[] mPlacePictures;
+        public ContentAdapter6(Context context) {
+            Resources resources = context.getResources();
+            TypedArray a = resources.obtainTypedArray(R.array.card_picture_explore_1);
+            mPlacePictures = new Drawable[a.length()];
+            for (int i = 0; i < mPlacePictures.length; i++) {
+                mPlacePictures[i] = a.getDrawable(i);
+            }
+            a.recycle();
+        }
+        @Override
+        public ViewHolder6 onCreateViewHolder(ViewGroup parent, int viewType) {
+            Log.e("MainScreenAdapter","entering onCreateViewHolder()");
+            return new ViewHolder6(LayoutInflater.from(parent.getContext()), parent);
+        }
+        @Override
+        public void onBindViewHolder(ViewHolder6 holder, int position) {
+            Log.e("ContentAdapter", "onBindViewHolder() Called");
+            holder.picture.setImageDrawable(mPlacePictures[position % mPlacePictures.length]);
+        }
+        @Override
+        public int getItemCount() {
+            Log.e("ContentAdapter", "getItemCount() Called");
+            return LENGTH;
+        }
+    }
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+         super.onCreateOptionsMenu(menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_screen_menu, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // One of the group items (using the onClick attribute) was clicked
+        // The item parameter passed here indicates which item it is
+        // All other menu item clicks are handled by onOptionsItemSelected()
+
+        switch (item.getItemId()) {
+            case R.id.profile:
+                profile();
+                return true;
+            case R.id.notification:
+                notification();
+                return true;
+            case R.id.add:
+                return  true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+    }
+
+    private void notification() {
+
+    }
+
+    private void profile() {
+
+        Intent intent = new Intent(MainScreen.this,Profile_Activity.class);
+        startActivity(intent);
+
+
+    }
 }
 
 
