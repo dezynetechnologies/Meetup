@@ -4,5 +4,7 @@
     <string name="profile">profile</string>
     <string name="add">add</string>
     <string name="search_hint">Search</string>
+    <string name="messages">Messages</string>
+    <string name="notifications">Notifications</string>
 
 </resources>

@@ -1,7 +1,6 @@
 package in.dezyne.meetup;
 
-import android.app.ActionBar;
-import android.app.Activity;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -363,6 +362,7 @@ public class MainScreen extends AppCompatActivity {
                 notification();
                 return true;
             case R.id.add:
+                add();
                 return  true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -370,17 +370,23 @@ public class MainScreen extends AppCompatActivity {
 
     }
 
-    private void notification() {
+    private void add() {
 
+        Intent intent = new Intent(MainScreen.this,Add_Activity.class);
+        startActivity(intent);
+    }
+
+    private void notification() {
+        Intent intent = new Intent(MainScreen.this,NotificationActivity.class);
+        startActivity(intent);
     }
 
     private void profile() {
-
         Intent intent = new Intent(MainScreen.this,Profile_Activity.class);
         startActivity(intent);
-
-
     }
+
+
 }
 
 

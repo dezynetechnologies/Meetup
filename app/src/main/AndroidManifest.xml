@@ -33,7 +33,8 @@
         </activity>
         <activity android:name=".MainScreen">
             </activity>
-        <activity android:name=".FabOnClickActivity">
+        <activity android:name=".FabOnClickActivity"
+            android:label="Search city">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
@@ -48,6 +49,18 @@
 
         <activity android:name=".Profile_Activity"
             android:theme = "@style/NoActionBar">
+        </activity>
+        <activity android:name=".NotificationActivity"
+            android:label="Updates">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainScreen" />
+            </activity>
+
+        <activity android:name=".Add_Activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainScreen" />
         </activity>
     </application>
 
