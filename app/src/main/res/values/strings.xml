@@ -6,5 +6,8 @@
     <string name="search_hint">Search</string>
     <string name="messages">Messages</string>
     <string name="notifications">Notifications</string>
+    <string name="policy">By using Meetup, you agree to our <u>Terms of Service</u> and <u>Privacy Policy</u></string>
+    <string name="detail_desc">In the summary, tell us what will happen at the event and what is interesting about it. Include the most interesting and most important information in the summary as this becomes the first paragraph on your event\'s web listing. It is read first and needs to engage people quickly</string>
+    <string name="detail_location">New Delhi</string>
 
 </resources>

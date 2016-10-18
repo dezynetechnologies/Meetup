@@ -1,6 +1,5 @@
 package in.dezyne.meetup;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -11,14 +10,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 
-/**
- * Created by Dezyne 2 on 10/12/2016.
- */
 
 public class Profile_Activity extends AppCompatActivity {
 
@@ -40,6 +37,42 @@ public class Profile_Activity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
 
     }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.profile_screen_menu, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // One of the group items (using the onClick attribute) was clicked
+        // The item parameter passed here indicates which item it is
+        // All other menu item clicks are handled by onOptionsItemSelected()
+
+        switch (item.getItemId()) {
+            case R.id.edit:
+                return true;
+            case R.id.refresh:
+                return true;
+            case R.id.menu:
+                return  true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+    }
+
+
+
+
+
+
+
+
+
     public class ViewHolder extends RecyclerView.ViewHolder
     {
 

@@ -28,11 +28,17 @@
         </activity>
 
         <activity
-            android:name=".MainActivity">
+            android:name=".MainActivity"
+            android:label="Hello, Again">
 
         </activity>
         <activity android:name=".MainScreen">
-            </activity>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
         <activity android:name=".FabOnClickActivity"
             android:label="Search city">
             <intent-filter>
