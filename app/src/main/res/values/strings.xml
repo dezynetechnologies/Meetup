@@ -9,5 +9,12 @@
     <string name="policy">By using Meetup, you agree to our <u>Terms of Service</u> and <u>Privacy Policy</u></string>
     <string name="detail_desc">In the summary, tell us what will happen at the event and what is interesting about it. Include the most interesting and most important information in the summary as this becomes the first paragraph on your event\'s web listing. It is read first and needs to engage people quickly</string>
     <string name="detail_location">New Delhi</string>
+    <string name="sign_up">Not much near you yet,but new Meetups start every day</string>
+    <string name="i_am_not_in">I am not in</string>
+    <string name="location_placeholder">Location Placeholder</string>
 
+    <string name="permission_required_toast">Need Permission</string>
+    <string name="record_audio_permission_denied" />
+    <string name="permission_rationale_record_audio"/>
+    <string name="mail">Enter your email address, we will send you an email with password reset instructions.</string>
 </resources>

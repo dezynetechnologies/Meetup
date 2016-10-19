@@ -13,10 +13,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 
-/**
- * Created by Dezyne 2 on 10/17/2016.
- */
-
 public class NotificationActivity extends AppCompatActivity {
 
     @Override

@@ -57,7 +57,7 @@
         android:layout_below="@+id/login"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"
-        android:id="@+id/textView22"
+        android:id="@+id/forget"
         android:textColor="@color/colorPrimary" />
 
     <TextView

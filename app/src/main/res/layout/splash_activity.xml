@@ -49,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign Up"
-        android:id="@+id/button"
+        android:id="@+id/signup"
 
         android:layout_above="@+id/login"
         android:layout_centerHorizontal="true"
