@@ -26,7 +26,7 @@
                 android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/image3"
+                android:id="@+id/image4"
                 android:tag="image_tag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -38,9 +38,9 @@
                     android:layout_height="40dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/add"
-                    android:layout_alignBottom="@+id/image3"
-                    android:layout_alignRight="@+id/image3"
-                    android:layout_alignEnd="@+id/image3" />
+                    android:layout_alignBottom="@+id/image4"
+                    android:layout_alignRight="@+id/image4"
+                    android:layout_alignEnd="@+id/image4" />
             </RelativeLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>

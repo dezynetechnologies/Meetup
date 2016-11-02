@@ -36,6 +36,7 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:scaleType="fitXY"
+                    android:id="@+id/add1"
                     android:src="@drawable/add"
                     android:layout_alignTop="@+id/image"
                     android:layout_alignRight="@+id/image"

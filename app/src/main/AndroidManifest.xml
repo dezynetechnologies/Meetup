@@ -88,6 +88,10 @@
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".MainActivity" />
         </activity>
+        <activity android:name=".Detail_activity1"/>
+        <activity android:name=".Detail_activity2"/>
+        <activity android:name=".Detail_activity3"/>
+        <activity android:name=".Detail_activity4"/>
     </application>
 
 </manifest>

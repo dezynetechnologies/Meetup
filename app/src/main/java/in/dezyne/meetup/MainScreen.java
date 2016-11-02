@@ -18,18 +18,17 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class MainScreen extends AppCompatActivity {
-
-    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_screen);
 
-        fab = (FloatingActionButton)findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,7 +38,6 @@ public class MainScreen extends AppCompatActivity {
 
             }
         });
-
 
 
         LinearLayoutManager linearLayoutManager
@@ -98,9 +96,21 @@ public class MainScreen extends AppCompatActivity {
 
         ImageView picture;
 
-        public ViewHolder(LayoutInflater inflater, ViewGroup parent) {
+        ViewHolder(LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.card_layout_1, parent, false));
             picture =(ImageView)itemView.findViewById(R.id.image);
+
+            //Detail_activity1 launches from here
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Context context = view.getContext();
+                    Intent intent = new Intent(context, Detail_activity1.class);
+                    intent.putExtra(Detail_activity1.EXTRA_POSITION, getAdapterPosition());
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 
@@ -139,9 +149,21 @@ public class MainScreen extends AppCompatActivity {
 
         ImageView picture;
 
-        public ViewHolder2(LayoutInflater inflater, ViewGroup parent) {
+        ViewHolder2(LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.card_layout_2, parent, false));
-            picture =(ImageView)itemView.findViewById(R.id.image2);
+            picture =(ImageView)itemView.findViewById(R.id.image4);
+
+            //Detail_activity2 launches from here
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Context context = view.getContext();
+                    Intent intent = new Intent(context, Detail_activity2.class);
+                    intent.putExtra(Detail_activity2.EXTRA_POSITION, getAdapterPosition());
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 
@@ -180,9 +202,21 @@ public class MainScreen extends AppCompatActivity {
 
         ImageView picture;
 
-        public ViewHolder3(LayoutInflater inflater, ViewGroup parent) {
+        ViewHolder3(LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.card_layout_3, parent, false));
-            picture =(ImageView)itemView.findViewById(R.id.image3);
+            picture =(ImageView)itemView.findViewById(R.id.image4);
+
+            //Detail_activity3 launches from here
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Context context = view.getContext();
+                    Intent intent = new Intent(context, Detail_activity3.class);
+                    intent.putExtra(Detail_activity3.EXTRA_POSITION, getAdapterPosition());
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 
@@ -222,9 +256,22 @@ public class MainScreen extends AppCompatActivity {
 
         ImageView picture;
 
-        public ViewHolder4(LayoutInflater inflater, ViewGroup parent) {
+        ViewHolder4(LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.card_layout_4, parent, false));
             picture =(ImageView)itemView.findViewById(R.id.image4);
+
+
+            //Detail_activity4 launches from here
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Context context = view.getContext();
+                    Intent intent = new Intent(context, Detail_activity4.class);
+                    intent.putExtra(Detail_activity4.EXTRA_POSITION, getAdapterPosition());
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 
