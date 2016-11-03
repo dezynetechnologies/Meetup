@@ -23,11 +23,6 @@ public class FabOnClickActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fab_on_click_layout);
 
-
-
-
-
-
     }
      @Override
     public boolean onCreateOptionsMenu(Menu menu) {

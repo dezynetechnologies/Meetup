@@ -1,6 +1,7 @@
 package in.dezyne.meetup;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
@@ -11,6 +12,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
@@ -52,6 +54,9 @@ public class Categories extends AppCompatActivity {
         public ViewHolder5(LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.card_layout_explore, parent, false));
             picture =(ImageView)itemView.findViewById(R.id.image_explore);
+
+
+
         }
     }
 

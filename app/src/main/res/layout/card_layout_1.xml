@@ -33,11 +33,12 @@
                 android:src="@drawable/music" />
 
                 <ImageButton
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:scaleType="fitXY"
                     android:id="@+id/add1"
                     android:src="@drawable/add"
+                    android:padding="0dp"
                     android:layout_alignTop="@+id/image"
                     android:layout_alignRight="@+id/image"
                     android:layout_alignEnd="@+id/image"

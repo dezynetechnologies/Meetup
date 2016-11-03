@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
@@ -16,10 +16,11 @@
         card_view:cardElevation="5dp"
         card_view:cardUseCompatPadding="true">
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/image_explore"
@@ -28,8 +29,20 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:src="@drawable/outdoor" />
+
         </LinearLayout>
+
+
     </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/explore_name_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name of the event"
+        android:fontFamily="sans-serif"
+        android:layout_marginLeft="25dp"
+        android:textColor="@android:color/white" />
 
 
 </LinearLayout>

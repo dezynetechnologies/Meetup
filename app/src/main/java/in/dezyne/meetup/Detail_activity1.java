@@ -17,6 +17,9 @@ public class Detail_activity1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_layout1);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
         int postion = getIntent().getIntExtra(EXTRA_POSITION, 0);
         Resources resources = getResources();
 

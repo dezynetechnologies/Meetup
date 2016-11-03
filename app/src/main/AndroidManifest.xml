@@ -88,10 +88,40 @@
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".MainActivity" />
         </activity>
-        <activity android:name=".Detail_activity1"/>
-        <activity android:name=".Detail_activity2"/>
-        <activity android:name=".Detail_activity3"/>
-        <activity android:name=".Detail_activity4"/>
+        <activity android:name=".Detail_activity1">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainScreen" />
+        </activity>
+        <activity android:name=".Detail_activity2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainScreen" />
+        </activity>
+        <activity android:name=".Detail_activity3">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainScreen" />
+        </activity>
+        <activity android:name=".Detail_activity4">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainScreen" />
+        </activity>
+        <activity
+            android:name=".Start_New_Activity"
+            android:label="Topics">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Add_Activity" />
+            </activity>
+        <activity android:name=".Category_click_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Categories" />
+
+        </activity>
+
     </application>
 
 </manifest>

@@ -8,6 +8,8 @@
     </array>
     <array name="card_picture_3">
         <item>@drawable/art</item>
+        <item>@drawable/art2</item>
+        <item>@drawable/art3</item>
     </array>
     <array name="card_picture_4">
         <item>@drawable/cartoon</item>

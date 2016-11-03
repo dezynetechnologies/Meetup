@@ -7,9 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-/**
- * Created by Dezyne 2 on 11/2/2016.
- */
+
 
 public class Detail_activity2  extends AppCompatActivity {
 
@@ -19,6 +17,8 @@ public class Detail_activity2  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_layout2);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         int postion = getIntent().getIntExtra(EXTRA_POSITION, 0);
         Resources resources = getResources();
