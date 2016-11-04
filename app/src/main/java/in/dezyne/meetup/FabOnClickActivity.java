@@ -8,6 +8,8 @@ import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 /**
@@ -22,6 +24,13 @@ public class FabOnClickActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fab_on_click_layout);
+
+
+        ListView l3 = (ListView) findViewById(R.id.list3);
+        String[] items = new String[] {"New Delhi", "Banglore", "Gurgaon","Pune","Mumbai"};
+        ArrayAdapter<String> adapter =
+                new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
+        l3.setAdapter(adapter);
 
     }
      @Override
